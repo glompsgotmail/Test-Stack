@@ -1,0 +1,4 @@
+node_modules
+# Keep environment variables out of version control
+.env
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/mydb"
