@@ -1,0 +1,21 @@
+runtime: nodejs18
+env: standard
+instance_class: F2
+entrypoint: npm start
+
+env_variables:
+  DATABASE_URL: "postgresql://mastergk:test123@10.2.208.3:5432/my-db"
+  DB_HOST: "/cloudsql/elaborate-howl-448423-g4:us-west2:my-db"  # Replace with your database connection info
+  DB_USER: "mastergk"
+  DB_PASSWORD: "test123"
+  DB_NAME: "my-db"
+
+
+
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
+
+vpc_access_connector:
+  name: "projects/elaborate-howl-448423-g4/locations/asia-east1/connectors/appengine-connector"  

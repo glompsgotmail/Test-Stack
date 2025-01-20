@@ -10,7 +10,7 @@ const Registration: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/register', {
+      const response = await fetch('https://elaborate-howl-448423-g4.de.r.appspot.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,7 +28,6 @@ const Registration: React.FC = () => {
 
       const result = await response.json();
       console.log('Registration successful:', result);
-      // You can redirect or show a success message here
 
     } catch (error: any) {
     console.error(error);
